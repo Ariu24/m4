@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title>Formulari</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="fitxer.css">
+    <!--Ariadna Fargallo i Daniel Merida-->
+</header>
+
+<body>
+    <h1>Subscriu-te al noticiari ITIC Barcelona</h1>
+    <h2>Primer, explica'ns qui ets</h2>
+    <!--Primer declarem que es un formulari, on s'enviaran les dades i per on volem que s'envii-->
+    <form action="formulari_enviat.html" method="post">
+        <!--demanarem les dades amb un  label i un input-->
+        <label for="mail">Email</label>
+        <input type="email" id="mail" name="user_mail" class="amplada" required><br>
+
+        <label for="nom">Nom i cognoms</label>
+        <input type="text" id="nomCognom" name="nomCognom" class="amplada" required><br>
+
+        <label for="edat">Edat</label>
+        <input type="number" id="edat" name="edad" id="edatAmp" required><br>
+
+        <!--Per fer un radio buttons ho farem amb select i dintre'aquest amb option agregarem els valors-->
+        <h2>Quin cicle estas estudiant?</h2>
+        <input type="radio" id="asix" name="cicle" value="asix">
+        <label for="asix">ASIX</label><br>
+        <input type="radio" id="dam" name="cicle" value="dam" checked>
+        <label for="dam">DAM</label><br>
+        <input type="radio" id="daw" name="cicle" value="daw">
+        <label for="daw">DAW</label><br>
+
+        <!--entrada de text desplegable amb dues opcions-->
+        <label for="curs">I en quin curs?</label>
+        <select id="curs" name="curs">
+            <option value="primer">Primer</option>
+            <option value="segon">Segon</option>
+        </select>
+
+        <!--Per el checkbox utilitzarem l'etiqueta checkbox -->
+        <h2>Marca els temes que vulguis estar sempre al dia!</h2>
+        <input type="checkbox" id="tema1IA" name="tema1" value="artificial" checked>
+        <label for="tema1"> Intel·ligència artificial</label><br>
+        <input type="checkbox" id="tema2Computacio" name="tema2" value="computacio">
+        <label for="tema2"> Computació</label><br>
+        <input type="checkbox" id="tema3SuperComp" name="tema3" value="supercomputadors">
+        <label for="tema3"> Supercomputadors</label><br>
+        <input type="checkbox" id="tema4Algorismia" name="tema4" value="algorismia">
+        <label for="tema4"> Recerca en algorísmia</label><br>
+
+        <!--Textarea quadre de text on l'usuari pot escriure el que vulgui-->
+        <p>Hi ha algun tema més que t'interessi? Explica'ns-ho!</p>
+        <textarea name="message" rows="10" cols="30" required
+            placeholder="També m'agradaria saber sobre les últimes novetats sobre..."></textarea><br>
+
+        <!--Boto que permet enviar el formulari-->
+        <input type="submit" class="botons">
+</body>
+
+</html>
